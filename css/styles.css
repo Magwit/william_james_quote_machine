@@ -1,3 +1,33 @@
+/*
+
+
+// Palette idea  http://blog.visme.co/website-color-schemes/ no 24 
+#17252a
+#2b7a78
+#3aafa9
+#def2f1
+#feffff
+
+*/
+
+
 body {
-    background-color: darkseagreen;
+    background-color: #3aafa9;
+}
+
+
+
+h1 {
+    font-family: 'GelasioRegular', serif;
+    font-weight: bold;
+    font-style: normal;
+    color: #17252a
+
+}
+
+p {
+    font-family: 'GelasioRegular', serif;
+    font-weight: normal;
+    font-style: normal;
+    color:#feffff;
 }
