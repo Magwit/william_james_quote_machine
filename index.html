@@ -2,31 +2,88 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/gelasio" type="text/css" />
-    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/aleo" type="text/css"/> 
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.1/css/bulma.css">
-   <link rel="stylesheet" href="css/styles.css">
-    
-    
-
-    <title>William James Quotes</title>
+	<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/gelasio" type="text/css" />
+	<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/aleo" type="text/css" />
+	<!--	Flexbox Grid System ONLY -->
+	<!--<link rel="stylesheet" type="text/css" href="https://s3.amazonaws.com/useful.ly/flex.css">-->
+	<!--Full CSS Framework with Flexbox Grid System-->
+	<link rel="stylesheet" type="text/css" href="https://s3.amazonaws.com/useful.ly/useful.ly.min.css">
+	<link rel="stylesheet" href="css/styles.css">
+	<title>William James' Quotes</title>
 </head>
 
 <body>
-    <h1>William James Quotes</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-    <button class="button">Click for a quote</button>
-    <div class="quote-zone">
-        <p>Hello this is a hardcoded quote.</p>
-    </div>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-        crossorigin="anonymous"></script>
-    <script src="js/main.js"></script>
+
+
+	<!-- Begin Header section -->
+	<!-- 
+<section id = "Header section">
+	<h1 class = "title flex center">Quotes of William James</h1>
+</section>
+
+
+ Begin Modal section
+	<section id="modal-section">
+		<button class="open-btn flex center">Open Quote</button>
+
+		<div id="modal" class="modal flex center">
+			<div class="modal-background"></div>
+			<div class="modal-content">
+				<p class="modal-close">X</p>
+				<h1>Header</h1>
+				<h5>Act as if what you do makes a difference. It does.</h5>
+			</div>
+		</div>
+	</section>
+-->
+	<!--	End Modal section-->
+
+
+
+	<!-- Begin Hero section-->
+
+	<div class="hero">
+		<div class="flex hero-content center">
+
+			<div>
+				<h2 class="title flex center">Quotes of William James</h2>
+				<button class="open-btn flex center small">Open Quote</button>
+				<div id="modal" class="modal flex center">
+					<div class="modal-background"></div>
+					<div class="modal-content">
+						<p class="modal-close">X</p>		
+						<h5>Act as if what you do makes a difference. It does.</h5>
+						<p class="bottomTweet">placeholder for Twitter</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- End Hero section-->
+
+	<!--<section id="modal-section">
+		<div id="modal" class="modal flex center">
+			<div class="modal-background"></div>
+			<div class="modal-content">
+				<p class="modal-close">X</p>
+				<h1>Header</h1>
+				<h5>Act as if what you do makes a difference. It does.</h5>
+			</div>
+		</div>
+	</section>-->
+
+
+	
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	  crossorigin="anonymous"></script>
+	<script src="js/main.js"></script>
 </body>
 
 </html>

@@ -10,27 +10,56 @@
 
 */
 
+.hero {
+    padding-top: 2rem;
+}
 
-body {
-    background-color: #3aafa9;
+
+body, .hero {
+    background-color: #17252a;
 }
 
 
 
-h1 {
-   /* font-family: 'GelasioRegular', serif;*/
-    font-family: 'AleoBold', Arial;
+h1, h2, h5{
 
+    font-family: 'AleoBold', Arial;
     font-weight: normal;
     font-style: normal;
-    color: #17252a
+    color: #def2f1;
 
 }
 
 p {
-/*    font-family: 'GelasioRegular', serif; */
+
    font-family: 'AleoRegular', Arial;
     font-weight: normal;
-    font-style: normal;
-    color: #17252a;
+    font-style: normal;   
+    color: #def2f1;
 }
+
+.modal-close {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.modal-content > p, h5, h1{
+    color: #17252a;
+    
+}
+
+.open-btn {
+    margin-top: 1rem;
+}
+
+.modal-content {
+   padding-top: 5rem;
+}
+
+/*
+.bottomTweet {
+   
+    position: absolute;
+    right:    0;
+    bottom:   0;
+}
+*/
