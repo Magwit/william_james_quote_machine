@@ -17,7 +17,8 @@
 
 body, .hero {
   /*  background-color: #17252a; */
-  background-color: #8d230f
+  background-color: #8d230f;
+  font-family : 'AleoRegular';
 }
 
 
@@ -33,7 +34,7 @@ h1, h2, h5{
 
 p {
 
-   font-family: 'AleoRegular', Arial;
+/*   font-family: 'AleoRegular', Arial; */
     font-weight: normal;
     font-style: normal;   
     color: #def2f1;

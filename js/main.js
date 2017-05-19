@@ -1,5 +1,5 @@
 $(document).ready(function () {
-	console.log('Hiya ! jQuery');
+// 	console.log('Hiya ! jQuery');
 
 	var url = 'js/quotedata.json';
 
@@ -7,8 +7,9 @@ $(document).ready(function () {
 
 	var $openBtn = $('.open-btn');
 	var $modalClose = $('.modal-close');
-	var $quotestring = $('.modal-content > h5') // .prepend(currentQuote);
+	var $quoteString = $('.modal-content > h5') 
 	var $modalBackground = $('.modal-background');
+	var $bottomTweet = $('.bottom-tweet');
 
 	// ### Ajax call to fetch a quote ###
 
@@ -22,6 +23,8 @@ $(document).ready(function () {
 			// specify the array for quotes  
 			var quoteArr = data[0].quotes;
 
+			// randomize by shuffling the array an picj index 0 and assign to chosenQuote
+
 			function Shuffle(o) {
 				for (
 					var j, x, i = o.length; i;
@@ -34,9 +37,10 @@ $(document).ready(function () {
 
 			Shuffle(quoteArr);
 
+			// 
 			var chosenQuote = quoteArr[0];
 
-			$($quotestring).html(chosenQuote);
+			$($quoteString).html(chosenQuote);
 
 		}
 	})
@@ -48,6 +52,8 @@ $(document).ready(function () {
 		modal.style.opacity = 1
 		document.body.style.overflow = "hidden";
 
+	
+
 	})
 
 	$($modalClose, $modalBackground).on('click', function () {
@@ -56,10 +62,17 @@ $(document).ready(function () {
 		document.body.removeAttribute("style");
 	})
 
-	console.log('end of jQuery');
+	$($bottomTweet).on('click',function() {
+		console.log('fågelsång');
+		var qText = $quoteString.text();
+		qText = 'https://twitter.com/intent/tweet?text=' + qText;;
+		window.open(qText);
+	})
+
+	// console.log('end of jQuery');
 
 });
-
+// http://bloggerjet.com/create-tweetable-quotes/
 
 // Functions come up as undefined if placed in the document ready function. 
 // http://stackoverflow.com/questions/1055767/why-can-i-not-define-functions-in-jquerys-document-ready
