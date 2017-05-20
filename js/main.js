@@ -1,5 +1,10 @@
 $(document).ready(function () {
-	// 	console.log('Hiya ! jQuery');
+
+	// ### error handler ###
+
+	function handleError(jqXHR, textStatus, error) {
+		console.log(error);
+	}
 
 	var url = 'js/quotedata.json';
 
@@ -10,7 +15,6 @@ $(document).ready(function () {
 	var $quoteString = $('.modal-content > h5')
 	var $modalBackground = $('.modal-background');
 	var $bottomTweet = $('.bottom-tweet');
-
 
 	// ### shuffle function to randomize ###
 
@@ -24,54 +28,18 @@ $(document).ready(function () {
 		return o;
 	}
 
-	// ### error handler ###
-
-	function handleError(jqXHR, textStatus, error) {
-		console.log(error);
-	}
-
-	// ### Ajax call to fetch a quote ###
 
 
-
-	// begin qpicker
-	function qpicker(data) {
+	// create array and callback to shullle
+	function quotePicker(data) {
 		var quoteArr = data[0].quotes;
-
-		// placoholder for original shuffle function. 
-
 		Shuffle(quoteArr);
-
 		var chosenQuote = quoteArr[0];
-
 		$($quoteString).html(chosenQuote);
 	}
 
 
-	// end qpicker
 
-
-
-
-	// NOTES to self. I want the AJAX call to return a whole array.
-	// And then have the shuffe function pick a quote from the array on click
-	// 
-
-	// Alt. The first page load is in fact pretty slow.
-	// page loads fonts andlibraries. 
-	// maybe the app is more effivcient with the ajax call in the 
-	// thingy.  This spreads the complexity. 
-	// DECISION I will study asynchronous js with netninja and consider the above
-	// LESSON since the ajax call i asynchronous that DENINITELY explains why all
-	// my console.log attepmth on 64 65 failed. They fired before the ajax was done.
-	// is the solution to this... lea
-
-
-	// placeholder for lower outside shuffle 
-
-
-	// console.log($quoteString);
-	// console.log(quoteArr);
 
 
 	// ### Modal DOM manipulation ###
@@ -80,13 +48,13 @@ $(document).ready(function () {
 		modal.style.visibility = "visible"
 		modal.style.opacity = 1
 		document.body.style.overflow = "hidden";
-			$.ajax({
-		type: "GET",
-		url: url,
-		success: qpicker,
-		error: handleError
-	}); 
-		
+		$.ajax({
+			type: "GET",
+			url: url,
+			success: quotePicker,
+			error: handleError
+		});
+
 
 	})
 
